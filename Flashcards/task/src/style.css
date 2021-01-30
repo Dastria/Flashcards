@@ -1,0 +1,80 @@
+.QuizArea{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+}
+
+h1{
+    font-family: "Times New Roman", Georgia, Serif;
+    font-size: 26px;
+    color: #203939;
+    text-align: center;
+    width: 300px;
+    height: 30px;
+    margin: 0;
+}
+
+.Card{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    perspective: 2000px;
+}
+
+.Front,
+.Back{
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    font-family: "Times New Roman", Georgia, Serif, sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    color: #403f45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+}
+
+.Front{
+    background-color: #dec69d;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.Back{
+    background-color: #d57357;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.Card:hover{
+    transform: rotateY(180deg);
+}
+
+
+.Qiz{
+    display: flex;
+    flex-flow: column;
+    width: 500px;
+    align-items: center;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.Body {
+    background-image: url("https://images.ua.prom.st/1762017316_w640_h640_karta-mira-s.jpg");
+    background-size: cover;
+}
